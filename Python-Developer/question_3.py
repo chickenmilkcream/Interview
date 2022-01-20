@@ -1,4 +1,8 @@
 def minimum_points(threshold, points):
+    """
+    Space: O(1)
+    Time: O(n)
+    """
     n = len(points)
     if n <= 0:
         return 0
