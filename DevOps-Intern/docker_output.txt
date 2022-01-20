@@ -1,0 +1,43 @@
+➜  ~ docker -v
+Docker version 20.10.7, build f0df350
+➜  ~ docker pull tiangolo/uwsgi-nginx-flask
+Using default tag: latest
+latest: Pulling from tiangolo/uwsgi-nginx-flask
+07471e81507f: Pulling fs layer 
+c6cef1aa2170: Pulling fs layer 
+13a51f13be8e: Pulling fs layer 
+def39d67a1a7: Waiting 
+a8367252e08e: Pulling fs layer 
+0e0383f87c27: Pulling fs layer 
+94708ec9c433: Pulling fs layer 
+b34541050735: Pull complete 
+aed710ca68db: Pull complete 
+e766872e18eb: Pull complete 
+ccbb24d05406: Pull complete 
+9020cef168ea: Pull complete 
+a6ecb7472e0f: Pull complete 
+19cca600003e: Pull complete 
+59231e69da2c: Pull complete 
+b0f7d00c7478: Pull complete 
+ad5581070686: Pull complete 
+14114d6d9b23: Pull complete 
+7656d42f4d6f: Pull complete 
+e4ac1d99acca: Pull complete 
+4ac5a5f1ab5e: Pull complete 
+25372ecc8016: Pull complete 
+316161da4d26: Pull complete 
+a7340c680ded: Pull complete 
+3a4699473584: Pull complete 
+626e556c81c6: Pull complete 
+3153d5f94c75: Pull complete 
+2e08d7d19021: Pull complete 
+fbd9ebf02435: Pull complete 
+ad7076347945: Pull complete 
+Digest: sha256:3ce028c10e49ba5931708910314c232e3186365e75285d3ec777fff24ca79f7e
+Status: Downloaded newer image for tiangolo/uwsgi-nginx-flask:latest
+docker.io/tiangolo/uwsgi-nginx-flask:latest
+➜  ~ docker run -d -p 5000:5000 --name becloudready tiangolo/uwsgi-nginx-flask
+c63d170d8c0553f6f2a93a430cd9d9429d481be001c328e7833e82421c57598f
+➜  ~ docker ps -a
+CONTAINER ID   IMAGE                                                                           COMMAND                  CREATED          STATUS                      PORTS                                                        NAMES
+c63d170d8c05   tiangolo/uwsgi-nginx-flask                                                      "/entrypoint.sh /sta…"   17 seconds ago   Up 16 seconds               80/tcp, 443/tcp, 0.0.0.0:5000->5000/tcp, :::5000->5000/tcp   becloudready
